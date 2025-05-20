@@ -1,0 +1,82 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.clock-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    min-width: 400px;
+}
+
+.days-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.days-list li {
+    font-size: 1rem;
+    padding: 5px 0;
+    width: 14%;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #cccccc;
+    transition: all 0.3s ease;
+}
+
+#time {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #4ecca3;
+    text-shadow: 0 0 10px rgba(78, 204, 163, 0.5);
+    letter-spacing: 3px;
+}
+
+#date {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #eeeeee;
+}
+
+.days-list li.active {
+    background-color: #ffd369;
+    color: #121212;
+    font-weight: bold;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 211, 105, 0.5);
+}
+
+.separator {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
